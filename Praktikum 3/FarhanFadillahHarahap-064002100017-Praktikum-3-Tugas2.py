@@ -45,8 +45,12 @@ while ulang == True:
     
     # 2. Cari nilai determinan
     
-    determinan = ((b**2)-(4*a*c))
-    print(('''
+    if a == 0:
+        print(('''
+             a. Determinan: INVALID'''))
+    else:
+        determinan = ((b**2)-(4*a*c))
+        print(('''
              a. Determinan: %s''')% determinan)
     
     # 3. rumus abc
@@ -84,20 +88,27 @@ while ulang == True:
         x1 = "{:.2f}".format(che)
         x2 = "{:.2f}".format(cho)
     
-    if determinan == 0:
-        xsama()
-        jenis = 'Akar Sama'
-    elif determinan < 0:
-        tidakriil(); 
-        jenis = 'Akar Tidak riil / Imaginer'
-    elif determinan > 0:
-        xbeda()
-        jenis = 'Akar Beda'
-    else:
-        exit()
-        
-    print(('''
-              b. %s
-                 x1 = %s
-                 x2 = %s''')%(jenis,x1,x2))
-    input('PRESS ENTER')
+    if a == 0:
+        print(('''
+            b. INVALID
+               x1 = INVALID
+               x2 = INVALID'''))
+        input('PRESS ENTER')
+    else:    
+        if determinan == 0:
+            xsama()
+            jenis = 'Akar Sama'
+        elif determinan < 0:
+            tidakriil(); 
+            jenis = 'Akar Tidak riil / Imaginer'
+        elif determinan > 0:
+            xbeda()
+            jenis = 'Akar Beda'
+        else:
+            exit()
+            
+        print(('''
+                b. %s
+                   x1 = %s
+                   x2 = %s''')%(jenis,x1,x2))
+        input('PRESS ENTER')
