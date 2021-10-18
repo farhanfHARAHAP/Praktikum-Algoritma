@@ -64,6 +64,28 @@ print(('''
       
       Rata-rata nilai = {3}
       
-      
+      SAVED AS 'nilai siswa.txt', CHECK YOUR DIRECTORY :)
       
       ''').format(datanilai,len(datanilai),sum(datanilai),rata2))
+      
+# Pemanis (Bonus) tadi gak ditampilin soalnya buru2 :D
+
+file = open('nilai siswa.txt','w')
+num = 0
+for i in range (len(datanilai)):
+    num += 1
+    form = (('{0}. Siswa ke-{1} = {2}\n').format(num,num,datanilai[i]))
+    file.write(form)
+    
+file.write('\n\n')
+rata2form = (('''
+             
+      Jumlah siswa: {0}
+      
+      Total nilai: {1}
+      
+      Rata-rata nilai = {2}
+      '''
+      ).format(len(datanilai),sum(datanilai),rata2) )   
+file.write(rata2form)
+file.close()
