@@ -6,6 +6,7 @@ Created on Mon Oct 18 12:43:14 2021
 Nama: Farhan Fadillah Harahap
 NIM: 064002100017
 """
+input('ReportInTxt by Farhan Fadillah Harahap\nPRESS ENTER')
 
 nilai = [ 4.00 , 3.75 , 3.50 , 3.00 , 2.75 , 2.50 , 2.00 , 1.75 , 1.50 , 1.25]
 score = 0
@@ -89,3 +90,5 @@ rata2form = (('''
       ).format(len(datanilai),sum(datanilai),rata2) )   
 file.write(rata2form)
 file.close()
+
+input()
