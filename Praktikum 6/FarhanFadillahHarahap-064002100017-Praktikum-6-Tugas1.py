@@ -66,11 +66,14 @@ nomor = 0
 while ulang == 0:
     nomor += 1
     nilaivar = masukkandata()
+    s = vartoscore(nilaivar)
     if nilaivar == 'EXIT':
         ulang = 1
+    elif s == 0:
+        print()
     else:
-        s = vartoscore(nilaivar)
         print(('Siswa ke-{0} = {1}').format(nomor,s))
         datanilai.append(s)
           
 hasil()
+input('\nPRESS ENTER')
