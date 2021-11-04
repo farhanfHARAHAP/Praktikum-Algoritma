@@ -7,10 +7,17 @@ Nama: Farhan Fadillah Harahap
 NIM: 064002100017
 """
 
-def createData(x):
-    for i in range(6):
+def createData(x,y):
+    if y == 0:
+        for i in range(6):
+            x.append(31)
+            x.append(30)
+    elif y == 1:
         x.append(31)
-        x.append(30)
+        x.append(29)
+        for i in range(4):
+            x.append(31)
+            x.append(30)
 
 def bulan():
     while True:
@@ -26,7 +33,6 @@ def bulan():
                 break
 
 def tahun():
-    global hari
     while True:
         try:
             x = int(input('Masukkan Tahun(angka): '))
@@ -39,29 +45,29 @@ def tahun():
                 sisa = x % 4
                 if sisa == 0:
                     print('\nKabisat')
-                    hari[4] = 28
+                    return 1
                 else:
                     print('\nNormal')
+                    return 0
             else:
                     sisa = x % 4
                     if sisa == 0:
                         print('\nKabisat')
-                        hari[4] = 28
+                        return 1
                     else:
                         print('\nNormal')  
+                        return 0
             break
 
 def main():
     while True:
         hari = ['none']
-        createData(hari)
         bln = bulan()
-        tahun()
+        thn = tahun()
+        createData(hari,thn)
         print(('Jumlah hari pada bulan {0}: {1}').format(bln,hari[bln]))
         ops = input('Press ENTER(lanjut) atau masukkan "n" untuk berhenti ')
         if ops == 'n':
             break
         
 main()
-
-
