@@ -1,46 +1,37 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Nov  8 16:43:07 2021
+Created on Tue Nov  9 11:20:47 2021
 
 @author: HP
-Nama: Farhan Fadillah Harahap
-NIM: 064002100017
 """
-def convert(list):
-    x = sum(d * 10**i for i, d in enumerate(list[::-1]))
-    return x
 
-def tentukan2(x):
-    if x == 2:
-        return 'nd'
-    elif x == 3:
-        return 'rd'
-    elif x == 1:
-        return 'st'
+# Buatlah sebuah program yang mencetak hasil dari fungsi faktorial
+# dengan menggunakan fungsi rekursif.
+
+def cek(x):
+    if x == 0:
+        return 1
+    elif x < 0:
+        return 'INVALID'
     else:
-        return 'th'
+        return fungsi(x)
+
+def fungsi(x):
+    if x == 1:
+        return x
+    else:
+        return x*fungsi(x-1) # Rekursif
     
-def tentukan1(x):
-    res = [int(x) for x in str(angka)]
-    if len(res) >= 2:
-        akhir2 = list()
-        akhir2.append(res[-2])
-        akhir2.append(res[-1])
-        che = convert(akhir2)
-        if che == 11 or che == 12 or che == 13:
-            return 'th'
-        else:
-            return tentukan2(res[-1])
-    else:
-        return tentukan2(x)
-
-
-while True:    
-    try:  
+def skip():
+    for i in range(100):
         print()
-        angka = int(input('Masukkan angka: '))
+
+print('Created by Farhan Fadillah Harahap')
+while True:
+    try:
+        input('PRESS ENTER')
+        skip()
+        mulai = int(input('Masukkan Bilangan: '))
+        print('Faktorial', mulai, 'adalah', cek(mulai))
     except ValueError:
-        print('INVALID')
-    else:
-        hasil = tentukan1(angka)
-        print(str(angka)+hasil)
+        print('INVALID INPUT!')
