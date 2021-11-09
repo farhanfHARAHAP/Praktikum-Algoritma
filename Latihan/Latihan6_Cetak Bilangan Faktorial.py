@@ -3,6 +3,8 @@
 Created on Tue Nov  9 11:20:47 2021
 
 @author: HP
+Nama: Farhan F Harahap
+NIM: 064002100017
 """
 
 # Buatlah sebuah program yang mencetak hasil dari fungsi faktorial
