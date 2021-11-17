@@ -79,6 +79,7 @@ def vnama(x,y):
                 l -= 1
         except IndexError:
             return -1
+    return -1
     
 def vnomor(arr, l, r, x):
  
