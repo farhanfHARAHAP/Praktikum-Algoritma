@@ -31,7 +31,7 @@ for line in file:
             nama.append(baris[2])
         else:
             nomor.append(int(baris[0]))
-            nim.append(int(baris[1]))
+            nim.append(str(baris[1]))
             nama.append(baris[2])
 nama = [line.strip() for line in nama]
 file.close()
@@ -181,18 +181,20 @@ while True:
         else:
             print(data2[result])
     elif opsi == 'b':
-        cari = str.upper(input('Pencarian: '))
-        if len(cari) >= 2:
-            digitl = [cari[-2],cari[-1]]
+        try:
+            cari = str(input('Pencarian: '))
+            if cari[0] == '0':
+                caril = list(cari)
+                caril.remove(caril[0])
+                cari = ''.join(caril)
+        except ValueError:
+            print('Masukkan NIM yang terdaftar!')
         else:
-            digitl = [cari[-1]]
-        digit = ''.join(digitl)
-        digit = int(digit)
-        result = vnomor(nomor,0,len(nomor)-1,int(digit))
-        if result == -1:
-            print('Yang anda cari tidak ditemukan!')
-        else:
-            print('>>',data2[result])
+            result = vnama(nim,cari)
+            if result == -1:
+                print('Masukkan NIM yang terdaftar!')
+            else:
+                print('>>',data2[result])
 
     elif opsi == 'c':
         cari = str.upper(input('Pencarian: '))
