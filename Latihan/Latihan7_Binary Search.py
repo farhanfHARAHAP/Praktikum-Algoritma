@@ -98,9 +98,9 @@ def vnomor(arr, l, r, x):
     else:
         return -1
     
-def vadv(o,cari):
+def vadv(farhanstan,cari):
     r = []
-    for nama in o:
+    for nama in farhanstan:
         for kata in nama.split(' '):
             temp = []
             for k in range(len(kata)):
@@ -126,15 +126,15 @@ def vadv(o,cari):
         for i in r:
             print (i)
 
-def vabjad(o,cari):
-    o = sorted(o)
+def vabjad(farhanstan,cari):
+    farhanstan = sorted(farhanstan)
     skip = {'A':0}
     skip2 = [0]
     
     data = []
     start = 0
     cache = 'A'
-    for a in o:
+    for a in farhanstan:
         fullname = list(a.split(' '))
         data.append(fullname)
         fname = fullname[0]
@@ -144,8 +144,8 @@ def vabjad(o,cari):
             skip[f'{letter}'] = start
             skip2.append(start)
         start += 1
-    skip['end'] = len(o)
-    skip2.append(len(o))
+    skip['end'] = len(farhanstan)
+    skip2.append(len(farhanstan))
       
          
     cari = cari
@@ -164,8 +164,8 @@ def vabjad(o,cari):
         r = []
         print(f'\nDengan awal huruf {cari[0]}:')
         for i in range(n,m):
-            r.append(o[i])
-            print(o[i])
+            r.append(farhanstan[i])
+            print(farhanstan[i])
         return r
 
 # ALURRR
