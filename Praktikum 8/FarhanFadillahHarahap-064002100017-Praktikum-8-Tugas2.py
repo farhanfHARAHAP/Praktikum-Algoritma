@@ -18,7 +18,7 @@ def negatif(x,y):
     hasil = float(1/positif(x,b))
     return hasil 
 
-def tentukan(x,y):      
+def haphap(x,y):      
     if y == 0:
         return 1
     elif x == 0:
@@ -41,5 +41,5 @@ while True:
     except ValueError:
         print('Masukkan angka bulat!')
     else:
-        print('Hasilnya yaitu',tentukan(angka,pangkat))
+        print('Hasilnya yaitu',haphap(angka,pangkat))
         print('==============================================')
