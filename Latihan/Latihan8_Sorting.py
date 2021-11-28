@@ -1,3 +1,8 @@
+'''
+Nama: Farhan Fadillah Harahap
+NIM: 064002100017
+'''
+
 # funcsss
 def bubble(arr):
     n = len(arr)
