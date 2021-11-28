@@ -150,12 +150,12 @@ while neverend == 1:
             if len(arr) <= 1:
                 input(new_error)
             else:
-                print(home_listupdated)
+                input(home_listupdated)
                 break
         elif opsi1 == 'b':
             arr = openfile()
             if arr != False:
-                print(home_listupdated)
+                input(home_listupdated)
                 break
         else:
             input(errormsg)
