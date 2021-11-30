@@ -1,3 +1,8 @@
+'''
+Nama: Farhan Fadillah Harahap
+NIM: 064002100017
+'''
+
 
 input('CREATED BY HARAHAP\nPRESS ENTER')
 
