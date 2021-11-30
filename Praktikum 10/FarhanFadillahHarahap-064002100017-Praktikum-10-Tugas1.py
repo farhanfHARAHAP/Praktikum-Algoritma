@@ -1,7 +1,9 @@
-'''
-Nama: Farhan Fadillah Harahap
-NIM: 064002100017
-'''
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Nov 30 15:18:47 2021
+
+@author: HP
+"""
 
 
 input('CREATED BY HARAHAP\nPRESS ENTER')
@@ -36,7 +38,7 @@ def binarySearch(arr, l, r, x):
     
 def createarray():
     y = []
-    input('Terus tambahkan elemen bilangan bulat di list\nJika sudah ketik huruf apa saja!\n\nPRESS ENTER')
+    input('\nTerus tambahkan elemen bilangan bulat di list\nJika sudah ketik huruf apa saja!\n\nPRESS ENTER')
     while True:
         try:
             x = int(input('\n>> '))
@@ -56,7 +58,7 @@ print(f'List setelah di-sort:\n{arr}')
 
 while True:
     try:
-        x = int(input('Mau cari angka berapa?(Ketik huruf untuk menyudahi!)\n\n>> '))
+        x = int(input('\nMau cari angka berapa?(Ketik huruf untuk menyudahi!)\n\n>> '))
     except:
         print('\nTERIMAKASIH!')
         break
