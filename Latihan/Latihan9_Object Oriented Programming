@@ -1,0 +1,59 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Dec  6 15:29:11 2021
+
+@author: HP
+Nama: Farhan Fadillah Harahap
+NIM: 064002100017
+"""
+
+print()
+
+class landveh():
+    
+    def __init__(self):
+        print()
+        print('Ini kendaraan darat!')
+        
+    def jalan(self):
+        print('Ngeeeng...')
+
+        
+class motor(landveh):
+    
+    def __init__(self,merk,model):
+        super().__init__()
+        self.merk = str.capitalize(merk)
+        self.model = str.capitalize(model)
+        print(f'{self.merk} {self.model} adalah kendaraan beroda dua!')
+        
+class mobil(landveh):
+    
+    def __init__(self,merk,model):
+        super().__init__()
+        self.merk = str.capitalize(merk)
+        self.model = str.capitalize(model)
+        print(f'{self.merk} {self.model} adalah kendaraan beroda empat!')
+        
+class bis(landveh):
+    
+    def __init__(self,merk,model):
+        super().__init__()
+        self.merk = str.capitalize(merk)
+        self.model = str.capitalize(model)
+        print(f'{self.merk} {self.model} adalah kendaraan beroda empat atau lebih!')
+        
+class sepeda(landveh):
+    
+    def __init__(self,merk,model):
+        super().__init__()
+        self.merk = str.capitalize(merk)
+        self.model = str.capitalize(model)
+        print(f'{self.merk} {self.model} adalah kendaraan beroda dua!')
+        
+        
+        
+v1 = motor('honda','vario')
+v2 = sepeda('pacific','sepeda gunung')
+v3 = mobil('toyota','avanza')
+v4 = bis('scania','bus pariwisata')
